@@ -1,0 +1,68 @@
+1) Dizi (Array) Nedir? Ne İşe Yarar? Gerçek Hayattan Örnek
+Dizi (Array), aynı türde birden fazla değeri saklayan veri yapısıdır.
+
+Ne İşe Yarar?
+
+Aynı türde birçok veriyi saklamak için kullanılır.
+Döngülerle kolayca erişilip işlenebilir.
+Bellekte düzenli bir yapı oluşturur.
+  
+Gerçek Hayattan Örnek:
+Sınıftaki öğrencilerin notları:
+
+int[] notlar = {85, 90, 78, 92, 88};
+
+Bir hafta içindeki sıcaklık değerleri:
+
+double[] sicaklik = {15.5, 16.8, 14.2, 13.0, 17.1, 18.3, 16.0};
+
+2)5 elemanlı bir int dizisi oluşturup, kullanıcıdan aldığı değerlerle diziyi dolduran ve ekrana yazdıran bir program yazın.
+
+  class Program
+{
+    static void Main()
+    {
+        int[] array = new int[5]; 
+        Console.WriteLine("Lütfen 5 sayı girin:");
+
+        
+        for (int i = 0; i < array.Length; i++)
+        {
+            Console.Write($"Sayı {i + 1}: ");
+            array[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+       
+        Console.WriteLine("\nGirilen sayılar:");
+        foreach (int sayi in array)
+        {
+            Console.Write(sayi + " ");
+        }
+    }
+}
+3)Bir dizinin içindeki en büyük sayıyı bulan bir C# programı yazın.
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] numbers = { -1, 49, 77, 100, 786768 }; 
+        int biggest = numbers[0]; 
+
+        
+        for (int i = 1; i < numbers.Length; i++)
+        {
+            if (numbers[i] > biggest)
+            {
+                biggest = numbers[i];
+            }
+        }
+
+        Console.WriteLine($"The biggest number is: {biggest}");
+    }
+}
+
+
+
